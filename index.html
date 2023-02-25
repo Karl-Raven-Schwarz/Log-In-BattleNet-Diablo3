@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Diablo 3</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/icon.png" type="image/png">
+</head>
+
+<body> 
+    <div class="row justify-content-center">
+        <div class="line"></div>
+    </div>
+
+    <div class="main row align-items-stretch m-0">
+        <div class="col-md-6 col-sm-5 d-none d-sm-block bg pr-0"></div>
+
+        <img src="./img/diablo.png" alt="" class="diablo w-50 d-md-flex d-none">
+
+        <div class="col form m-0">
+            <div class="row pt-5 mb-5 m-0">
+                <div class="col-3 text-center logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+
+                <div class="col-9 title font-weight-bolder my-auto p-0">
+                    <h2 class="font-weight-bolder">
+                        <span class="battle-net">BATTLE</span>.<span class="battle-net">NET</span>
+                    </h2>
+
+                    <h2 class="font-weight-bolder beta">BETA</h2>
+                </div>
+            </div>
+            
+            <!--LOG IN-->
+
+            <form action="#" class="px-5 px-lg-5 px-sm-4 log-in">
+                <!--REGION-->
+                <div class="row region p-0 m-0">
+                    <div class="col-2 col-lg-2 col-sm-3 pr-0 pl-0">
+                        <button class="btn region-btn">
+                            <ion-icon class="pt-1" name="globe-outline"></ion-icon>
+                            <ion-icon name="chevron-down-outline" id="arrow"></ion-icon>
+                        </button>
+
+                        <div class="regions p-3 rounded">
+                            <p class="font-weight-bold p-0 m-0 mb-2">LOGIN REGION</p>
+                            <ul class="m-0 p-0">
+                                <li class="list-regions active-regions">Americas</li>
+                                <li class="list-regions">Europe</li>
+                                <li class="list-regions">Asia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col pt-1 pl-0">
+                        <h3 class="region-text my-auto" id="region-text">Americas</h3>
+                    </div>
+
+                    <div class="col text-right pr-0">
+                        <button class="btn settings-btn">
+                            <ion-icon class="pt-1" name="settings-outline"></ion-icon>
+                        </button>
+
+                        <div class="settings text-left p-3 rounded">
+                            <ul class="m-0 p-0">
+                                <li>Use Last Status</li>
+                                <li>Appear Offline</li>
+                            </ul>
+
+                            <div class="settings-separator my-2"></div>
+
+                            <ul class="m-0 p-0">
+                                <li>Settings</li>
+                                <li>Continue Without Logging In</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EMAIL & PASSWORD-->
+                <div class="my-4">
+                    <input type="email" placeholder="Email or phone" class="form-control input mb-4">
+                    <input type="password" placeholder="Password" class="form-control input">
+                </div>
+
+                <!--CHECKBOX-->
+                <div class="my-4 form-check">
+                    <input type="checkbox" name="connected" class="form-check-input checkbox">
+                    <label for="conected" class="form-check-label checkbox-label pl-3">Keep me logged in</label>
+                    <span class="help pt-2"><ion-icon name="help-circle-outline"></ion-icon></span>
+                </div>
+
+                <div class="row text-center buttons">
+                    <div class="col">
+                        <button type="submit" class="btn font-weight-bold login-btn">Log In</button>
+                    </div>
+
+                    <div class="col">
+                        <button type="submit" class="btn font-weight-bold cantlogin-btn">Can't Log in?</button>
+                    </div>
+                </div>
+            </form>
+
+            <form action="#" class="px-5 px-lg-5 px-sm-4 create">
+                <h2>New to Rubattle.net?</h2>
+
+                <div class=" text-center">
+                    <button type="submit" class="btn font-weight-bold">Create a Free Account</button>
+                </div>
+            </form>
+            
+            <div class="row p-0 mx-0 mt-0 mb-5 justify-content-center">
+                <img src="./img/diablo.png" alt="" class="diablo2 w-75 d-md-none">
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

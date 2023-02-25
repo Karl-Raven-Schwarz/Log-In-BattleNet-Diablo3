@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Gajraj+One&display=swap');
+
+html{
+    overflow-x: hidden;
+    background: #000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.line{
+    position: absolute;
+    background-color: gray;
+    opacity: .30;
+    height: 15px;
+    width: 90%;
+}
+
+.main{
+    height: 100vh;
+}
+
+.bg{
+    background-color: #000;
+    background-image: url(../img/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat, no-repeat;
+    
+    box-shadow: rgba(0, 0, 0, .5) 0 0px 20px 50px inset;
+}
+
+.diablo{
+    padding-right: 5%;
+    padding-left: 5%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: radial-gradient(closest-side,#000, transparent);
+}
+
+.form{
+    background:linear-gradient(180deg,#242F41, #1E222D);
+    box-shadow: #2A2E39 0px 0px 0px 5px inset;
+    padding: 0;
+    margin: 0;
+
+    .logo{
+        align-items: end;
+
+        img{
+            max-height: 100px;
+        }
+    }
+
+    .title{
+        color: #019FD4;
+        text-align: start;
+        h2{
+            line-height: 30px;
+        }
+
+        .battle-net{
+            font-family: 'Aclonica', sans-serif;
+            font-size: 40px;
+            background: -webkit-linear-gradient(#fff, #a1a1a1);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .beta{
+            font-family: 'Aclonica', sans-serif;
+        }
+    }
+
+    .log-in{
+        .region{
+            .region-btn, .settings-btn{
+                background: #1C222E;
+                color: #019FD4;
+                border: 1px solid #616266;
+                text-align: center;
+                display: inline-block;
+
+                &:focus{
+                    box-shadow: none;
+                    border: 1px solid #616266;
+                    background: #222a38;
+                }
+
+                #arrow{
+                    color: #b6b6b6;
+                }
+            }
+
+            .region-text{
+                color: #b6b6b6;
+                text-align: left;
+                font-size: 25px;
+            }
+
+            .regions{
+                z-index: -10;
+                background: #1A1C23;
+                position: absolute;
+                margin-top: 2px;
+                border: 1px solid #616266;
+                transition: .5s;
+                height: 0px;
+                overflow: hidden;
+                transform: scale(1);
+                
+                p{
+                    color: #b6b6b6;
+                    font-size: 16px;
+                }
+
+                ul{
+                    display: block;
+                    color: #C3C3C5;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+
+                    li{
+                        padding: 5px 0px 5px 20px;
+                        list-style: none;
+                        margin: auto;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #272930;
+                        }
+
+                        &.active-regions{
+                            color: #fff;
+                            background-color: #272930;
+                            border-left: 2px solid #019FD4;
+                        }
+                    }
+                }
+            }
+
+            &.open-region .regions{
+                z-index: 10;
+                height: 168px;
+                opacity: 1;
+                transition-delay: .1s;
+                transform: scale(1);
+            }
+
+            &.open-region .region-btn #arrow{
+                transform: rotate(180deg);
+            }
+
+            .settings{
+                z-index: -10;
+                background: #1A1C23;
+                position: absolute;
+                margin-top: 2px;
+                right: 48px;
+                border: 1px solid #616266;
+                transition: .5s;
+                height: 0px;
+                overflow: hidden;
+                transform: scale(1);
+
+                .settings-separator{
+                    height: 1px;
+                    background-color: #36383E;
+                }
+
+                ul{
+                    display: block;
+                    color: #C3C3C5;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+
+                    li{
+                        padding: 5px 0px 5px 20px;
+                        list-style: none;
+                        margin: auto;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #272930;
+                        }
+                    }
+                }
+            }
+
+            &.open-settings .settings{
+                z-index: 10;
+                height: 187px;
+                opacity: 1;
+                transition-delay: .1s;
+                transform: scale(1);
+            }
+        }
+
+        .input{
+            background: #101117;
+            border: 1px solid #616266;
+            color: #fff;
+
+            &:hover{
+                border: 1px solid #7B7C7F;
+            }
+            
+            &:focus{
+                border: 1px solid  #019FD4;
+                box-shadow: none;
+            }
+        }
+
+        .checkbox{
+            background-color: #101117;
+            border: 1px solid #616266;
+            height: 25px;
+            width: 25px;
+            color: #019FD4;
+            cursor: pointer;
+            
+            &:checked{
+                background-color: #019FD4;
+            }
+
+            &:hover{
+                border: 1px solid #7B7C7F;
+            }
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        
+        .checkbox-label{
+            color: #b6b6b6;
+            position: relative;
+            top: -7px; 
+        }
+
+        .help{
+            color: #019FD4;
+            font-size: 25px;
+        }
+
+        .buttons{
+            .login-btn{
+                background: #227ea0;
+                color: #fff;
+                width: 100%;
+                padding: 12px 0;
+                font-size: 20px;
+                
+                &:hover{
+                    border: 2px solid #019FD4;
+                    padding: 11px 0;
+                }
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+
+            .cantlogin-btn{
+                background: #191D26;
+                color: #019FD4;
+                border: 1px solid #616266;
+                width: 100%;
+                padding: 12px 0;
+                font-size: 20px;
+
+                &:hover{
+                    border: 2px solid #7B7C7F;
+                    padding: 11px 0;
+                }
+
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .create{
+        background: #161D27;
+        margin: 0;
+        margin-top: 35px;
+        padding: 40px 0px;
+        box-shadow: #2A2E39 0px 0px 0px 4px inset;
+
+        h2{
+            color: #C5C2C7;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        button{
+            background: #191D26;
+            color: #019FD4;
+            border: 1px solid #616266;
+            width: 100%;
+            padding: 12px 0;
+            font-size: 22px;
+
+            &:hover{
+                border: 2px solid #7B7C7F;
+                padding: 11px 0;
+            }
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+
+    .diablo2{
+        padding-right: 5%;
+        padding-left: 5%;
+        left: 0;
+        bottom: 0;
+        background: radial-gradient(closest-side,#000, transparent);
+    }
+}
+
+@media (max-width: 991.98px) { 
+    .bg{
+        background-position: top left;
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    .battle-net {
+        font-size: 35px;
+    }
+
+    .beta{
+        font-size: 30px;
+    }
+    
+    .form .log-in .region .settings{
+        right: 24px;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768px) { 
+    .diablo{
+        display: none;
+    }
+
+    .logo img{
+        height: 75px;
+    }
+
+    .battle-net{
+        font-size: 35px !important;
+    }
+
+    .beta{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .logo img{
+        height: 100px;
+    }
+
+    .battle-net{
+        font-size: 35px;
+    }
+
+    .beta{
+        font-size: 30px;
+    }
+
+    #arrow{
+        display: inline-block; 
+    }
+
+    .form .log-in .region .settings{
+        right: 48px;
+    }
+}
+
+@media (max-width: 500px) { 
+    #arrow{
+        display: none; 
+    }
+
+    .logo img{
+        height: 60px;
+    }
+
+    .battle-net{
+        font-size: 30px;
+    }
+
+    .beta{
+        font-size: 25px;
+    }
+}
